@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     lazy var classificationRequest: VNCoreMLRequest = {
         do{
-            let classifier = try SnackClassifier(configuration: MLModelConfiguration())
+            let classifier = try SnackClassifierHealthy(configuration: MLModelConfiguration())
             
             let model = try VNCoreMLModel(for: classifier.model)
             let request = VNCoreMLRequest(model: model, completionHandler: {
