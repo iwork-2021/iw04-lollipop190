@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     // for video capturing
     var videoCapturer: VideoCapture!
     let semphore = DispatchSemaphore(value: ViewController.maxInflightBuffer)
-    var inflightBuffer = 0
+    var inflightBuffer = 0 
     static let maxInflightBuffer = 2
     
     lazy var classificationRequest: VNCoreMLRequest = {
